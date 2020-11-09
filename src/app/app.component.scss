@@ -1,0 +1,193 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+  background: #000;
+  text-align: center;
+  padding: 0 2em;
+
+  header {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: center;
+    width: 100vw;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      margin: 0;
+      color: #fff;
+    }
+
+    h1 {
+      font-size: 6rem;
+      letter-spacing: 1rem;
+    }
+
+    h3 {
+      font-size: 2rem;
+      letter-spacing: .5rem;
+      margin-bottom: .5rem;
+    }
+
+    h4 {
+      font-size: 1.5rem;
+      letter-spacing: .75rem;
+      margin-top: 2rem;
+    }
+
+    h6 {
+      font-size: 1rem;
+      letter-spacing: 1.5rem;
+      margin-top: -1rem;
+    }
+  }
+}
+
+.tabs {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 70px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  z-index: 10;
+  &--top {
+      position: fixed;
+      top: 0;
+  }
+}
+
+.tab {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  color: #000;
+  letter-spacing: 0.1rem;
+  transition: all 0.5s ease;
+  font-size: 0.8rem;
+  &:hover {
+    color:white;
+    background: rgba(102,177,241,0.8);
+    transition: all 0.5s ease;
+    cursor: pointer;
+  }
+}
+
+
+.has-fire {
+  display:flex;
+  flex-direction: column;
+  color: #fff;
+
+  .this {
+    z-index: 1;
+  }
+
+  .after {
+    margin-top: -7rem;
+  }
+
+  .before,
+  .after {
+    color: transparent;
+    transform: scale(1);
+    transition: all .5s;
+  }
+
+  .before {
+    margin-bottom: -7rem;
+  }
+
+  &:hover .before {
+    animation: fire 3s infinite;
+    color: #FF0000;
+  }
+
+  @keyframes fire {
+    0% {
+      filter: blur(27px);
+    }
+    10% {
+      filter: blur(37px);
+    }
+    20% {
+      filter: blur(42px);
+    }
+    30% {
+      filter: blur(28px);
+    }
+    40% {
+      filter: blur(18px);
+    }
+    50% {
+      filter: blur(25px);
+    }
+    60% {
+      filter: blur(29px);
+    }
+    70% {
+      filter: blur(32px);
+    }
+    80% {
+      filter: blur(30px);
+    }
+    90% {
+      filter: blur(35px);
+    }
+    100% {
+      filter: blur(27px);
+    }
+  }
+
+  &:hover .after {
+    animation: fire2 1.5s infinite;
+    color: #FFBF00;
+  }
+
+  @keyframes fire2 {
+    0% {
+      filter: blur(7px);
+    }
+    10% {
+      filter: blur(17px);
+    }
+    20% {
+      filter: blur(12px);
+    }
+    30% {
+      filter: blur(8px);
+    }
+    40% {
+      filter: blur(12px);
+    }
+    50% {
+      filter: blur(5px);
+    }
+    60% {
+      filter: blur(9px);
+    }
+    70% {
+      filter: blur(12px);
+    }
+    80% {
+      filter: blur(10px);
+    }
+    90% {
+      filter: blur(15px);
+    }
+    100% {
+      filter: blur(17px);
+    }
+  }
+}
